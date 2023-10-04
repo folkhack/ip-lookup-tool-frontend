@@ -1,0 +1,84 @@
+{
+    "compilerOptions": {
+
+        // Enables strict type-checking options
+        "strict": true,
+
+        // Specifies the ECMAScript target version
+        "target": "es2020",
+
+        // Specifies the module code generation
+        "module": "es2020",
+
+        // Modules resolution:
+        // - "node" = Mimics Node.js' module resolution mechanism. Looks inside
+        //   `node_modules` and works with both `.js` and `.json` files. Compatible
+        //    with CJS and ES6 module syntax.
+        // - "bundler" = Supports package.json "imports" and "exports", but unlike
+        //   the Node.js resolution modes, bundler never requires file extensions on
+        //   relative paths in imports.
+        // - "classic" = TypeScript's original resolution strategy. Doesn't consider
+        //   `node_modules` or understand JSON files and is less commonly used today.
+        // - https://github.com/babel/babel/issues/10237#issuecomment-513028440
+        // - https://www.typescriptlang.org/tsconfig#moduleResolution
+        "moduleResolution": "node",
+
+        // Support non "* as" imports; ex:
+        //   `import React from 'react'` instead of `import * as React from 'react'`
+        "allowSyntheticDefaultImports": true,
+
+        // Changes the emitted JavaScript to add an extra layer of compatibility for
+        //    default imports
+        "esModuleInterop": true,
+
+        // Allows JavaScript files to be imported
+        // - Needed with ^.+\\.[tj]sx?$ Jest transform so .js `node_modules` are capable of
+        //   being imported
+        // - Disabled by default due to not needing to be enabled by default - usually needed
+        //   importing/testing things in `node_modules` due to own project being TypeScript
+        // - Needed for demo application for JSON syntax highlighting
+        "allowJs": true,
+
+        // Additional libs that are available in the global context
+        "lib": [
+
+            // Dom (ex: window, document)
+            "dom",
+            "dom.iterable",
+            
+            // ESNext for modern JS features (ex: Map, Set)
+            "esnext"
+        ],
+
+        // TSX/JSX support:
+        // - Controls how JSX constructs are emitted in `.js` files
+        // - Only affects the output of JS files that started in `.tsx` files
+        // - "react-jsx" uses new React 17 compilation
+        // - "react-jsxdev" for more debugging information
+        "jsx" : "react-jsx",
+
+        // Path aliases
+        // - Used to avoid excessive relative pathing and/or weird absolute pathing hacks
+        "paths" : {
+            "@assets/*" : [ "./assets/*" ],
+            "@src/*"    : [ "./src/*" ]
+        },
+    },
+
+    "include": [
+
+        // Jest setup
+        "jest_setup.ts",
+
+        // Include global type definitions
+        "types/**/*.d.ts",
+
+        // Include everything in src directory
+        "src/**/*",
+
+        // Include everything in tests directory
+        "tests/**/*",
+    ],
+
+    "exclude": []
+}

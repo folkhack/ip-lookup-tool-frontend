@@ -1,0 +1,10 @@
+.env
+node_modules
+coverage
+*.sublime-workspace
+build-meta.json
+*.key
+*.cert
+/test-results/
+/playwright-report/
+/playwright/.cache/

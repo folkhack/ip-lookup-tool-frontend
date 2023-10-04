@@ -1,0 +1,31 @@
+.wrapper {
+    margin: 0 0 calc( var( --padding ) * 0.5 );
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: calc( var( --padding ) * 0.25 );
+}
+
+.input {
+    color: var( --c_black );
+    background: var( --c_white );
+    font-size: var( --font_size );
+    border: var( --borders );
+    padding: calc( var( --padding ) * 0.5 );
+    width: 100%;
+}
+
+.help {
+    margin-top: calc( var( --padding ) * 0.25 );
+    color: #666;
+    font-style: italic;
+    font-size: 80%;
+}
+
+@media ( prefers-color-scheme: dark ) {
+
+    .input { background: #111; }
+    .help { color: #aaa; }
+}

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<main
+  id="app"
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="title"
+    >
+      <img
+        alt="Magnifying Glass"
+        src="test_file_contents"
+        title="Magnifying Glass"
+      />
+      <h1>
+        IP Info Lookup Tool
+      </h1>
+    </div>
+    <div
+      className="body"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <div
+          className="wrapper"
+        >
+          <label
+            className="label"
+            htmlFor="ip_address"
+          >
+            IP Address
+            :
+          </label>
+          <input
+            className="input"
+            id="ip_address"
+            name="ip_address"
+            onChange={[Function]}
+            placeholder="ex: 2606:4700:4700::64"
+            required={true}
+          />
+          <div
+            className="help"
+          >
+            <b>
+              NOTE:
+            </b>
+             IPv4 & IPv6 supported!
+          </div>
+        </div>
+        <div
+          className="text_center"
+        >
+          <button
+            className="button"
+            type="submit"
+          >
+            Lookup IP Address »
+          </button>
+        </div>
+        <div
+          className="result_wrap"
+        />
+      </form>
+    </div>
+  </div>
+  <footer
+    className="footer"
+  >
+    <p>
+      This is a test application that sits in front of 
+      <a
+        href="https://ip-api.com/docs"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        ip-api.com's IP information API
+      </a>
+      <br />
+      Corresponding back-end API implementation @ 
+      <a
+        href="https://github.com/folkhack/ip-lookup-tool"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        github.com/folkhack/ip-lookup-tool
+      </a>
+    </p>
+  </footer>
+</main>
+`;

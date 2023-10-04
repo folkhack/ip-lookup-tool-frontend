@@ -1,0 +1,39 @@
+.wrapper {
+    border: var( --borders );
+    margin: 0 0 var( --padding );
+    border-radius: calc( var( --padding ) * 0.5 );
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.2 );
+}
+
+@media( max-width: 700px ) {
+
+    .wrapper { border-radius: 0; }
+}
+
+.title {
+    padding: var( --padding );
+    border-bottom: var( --borders );
+    background: var( --c_off_white );
+    font-weight: 700;
+}
+
+.title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    display: inline;
+}
+
+.title img {
+    display: inline;
+    max-width: var( --font_size );
+    margin: 0 calc( var( --padding ) / 2 ) 0 0;
+}
+
+.body {
+    padding: var( --padding );
+    background: var( --c_white );
+}
+
+.body > *:last-child { margin-bottom: 0; }

@@ -1,0 +1,13 @@
+.errors_wrap {
+    color: var( --c_error );
+}
+
+.errors_heading {
+    margin: 0 0 calc( var( --padding ) * 0.25 );
+    font-size: var( --font_size );
+    font-weight: bold;
+}
+
+.results_table { margin-top: var( --padding ); }
+
+.result_wrap { border: var( --borders ); }

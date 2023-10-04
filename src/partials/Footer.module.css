@@ -1,0 +1,10 @@
+.footer {
+    text-align: center;
+    opacity: 40%;
+    margin: 0 auto;
+    padding: calc( var( --padding ) / 2 ) var( --padding );
+}
+
+.footer a {
+    color: var( --c_black );
+}

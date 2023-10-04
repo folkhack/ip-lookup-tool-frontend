@@ -1,0 +1,20 @@
+.button {
+
+    font-size: var( --font_size );
+    font-weight: bold;
+    padding: calc( var( --padding ) * 0.5 );
+    color: var( --c_black );
+    background: var( --c_off_white );
+    border: var( --borders );
+    border-radius: calc( var( --padding ) * 0.25 );
+    cursor: pointer;
+}
+
+.button:hover { border-color: var( --c_black ); }
+
+.button:active { background: #eee; }
+
+@media ( prefers-color-scheme: dark ) {
+
+    .button:active { background: #505050; }
+}
